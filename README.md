@@ -1,7 +1,7 @@
 
 ### Hi there 👋
-💬 Ask me about ...<h1><a href="https://prguptadev.netlify.app/">just click</a></h1>
-<h1><a href="https://prguptadev.netlify.app/"></a></h1>
+💬 Ask me about ...
+- Find [💬 Ask me about ...](https://goo.gl/maps/AhkNVzkAwkLzGGeM6) 
 <!--
 **prguptadev/prguptadev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
