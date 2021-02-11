@@ -1,6 +1,6 @@
 
 ### Hi there 👋
-[💬 About me ...](https://prguptadev.netlify.app) 
+[📫 How to reach me: ...](https://prguptadev.netlify.app) 
 <!--
 **prguptadev/prguptadev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
