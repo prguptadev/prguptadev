@@ -1,5 +1,8 @@
-### Hi there 👋
 
+### Hi there 👋
+[💼 Resume](https://prguptadev.netlify.app) 
+<br>
+[🔭Linkedin](https://www.linkedin.com/in/prashant-gupta-31023b10a/)
 <!--
 **prguptadev/prguptadev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +17,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+“Intelligence is the ability to avoid doing work, yet getting the work done.”
+― Linus Torvalds
