@@ -5,6 +5,7 @@ from fuzzywuzzy import process
 import re
 from typing import Dict, List, Tuple, Any
 import openpyxl
+import datetime # <-- Added for timestamp
 
 class ExcelFuzzyMapper:
     def __init__(self, excel1_path: str, excel2_path: str, mapping_excel_path: str):
@@ -28,7 +29,7 @@ class ExcelFuzzyMapper:
         # Ensure column names are strings
         self.df1.columns = self.df1.columns.astype(str)
         self.df2.columns = self.df2.columns.astype(str)
-        
+    
     def parse_mapping_expression(self, expr: str) -> List[str]:
         """
         Parse mapping expressions like 'a10+a12' into ['a10', 'a12']
@@ -40,8 +41,7 @@ class ExcelFuzzyMapper:
             List of column names
         """
         # Remove spaces and split by '+'
-        # expr = expr.strip().replace(' ', '')
-        columns = expr.split('+')
+        columns = expr.strip().replace(' ', '').split('+')
         return columns
     
     def get_concatenated_value(self, df: pd.DataFrame, columns: List[str], row_idx: int) -> str:
@@ -70,7 +70,7 @@ class ExcelFuzzyMapper:
     
     def fuzzy_match_rows(self, str1: str, str2: str, threshold: int = 80) -> Tuple[bool, int]:
         """
-        Perform fuzzy matching between two strings.
+        Perform case-insensitive fuzzy matching between two strings.
         
         Args:
             str1: First string
@@ -80,12 +80,12 @@ class ExcelFuzzyMapper:
         Returns:
             Tuple of (is_match, similarity_score)
         """
-        # Convert to string and handle None values
-        str1 = str(str1) if pd.notna(str1) else ''
-        str2 = str(str2) if pd.notna(str2) else ''
+        # Convert to string, handle None values, and convert to lowercase
+        str1 = str(str1).lower() if pd.notna(str1) else ''
+        str2 = str(str2).lower() if pd.notna(str2) else ''
         
-        # Calculate similarity score
-        score = fuzz.ratio(str1., str2)
+        # Calculate similarity score on lowercase strings
+        score = fuzz.ratio(str1, str2)
         
         return score >= threshold, score
     
@@ -100,10 +100,10 @@ class ExcelFuzzyMapper:
             DataFrame with fuzzy matching results
         """
 
-        print ("DFs :/n")
-        print (f"Excel1: {self.df1.head()}/n")
-        print (f"Excel2: {self.df2.head()}/n")
-               
+        print ("DFs :\n")
+        print (f"Excel1: {self.df1.head()}\n")
+        print (f"Excel2: {self.df2.head()}\n")
+              
         results = []
         
         # Get primary key mapping (assuming first row contains primary key mapping)
@@ -128,7 +128,8 @@ class ExcelFuzzyMapper:
                 
                 for idx2, row2 in self.df2.iterrows():
                     pk_value2 = self.get_concatenated_value(self.df2, pk_target_cols, idx2)
-                    is_match, score = self.fuzzy_match_rows(pk_value1.lower(), pk_value2.lower(), threshold)
+                    # The fuzzy_match_rows function now handles case-insensitivity internally
+                    is_match, score = self.fuzzy_match_rows(pk_value1, pk_value2, threshold)
                     
                     if is_match and score > best_match_score:
                         best_match_idx = idx2
@@ -185,7 +186,7 @@ class ExcelFuzzyMapper:
                 'Total Rows in Excel1': [len(self.df1)],
                 'Total Rows in Excel2': [len(self.df2)],
                 'Total Matched Rows': [len(results_df)],
-                'Match Rate': [f"{len(results_df)/len(self.df1)*100:.2f}%"]
+                'Match Rate': [f"{len(results_df)/len(self.df1)*100:.2f}%" if len(self.df1) > 0 else "0.00%"]
             }
             summary_df = pd.DataFrame(summary_data)
             summary_df.to_excel(writer, sheet_name='Summary', index=False)
@@ -195,14 +196,15 @@ class ExcelFuzzyMapper:
         
         print(f"Match report saved to: {output_path}")
 
-  def main():
+def main():
     """
     Main function to run the fuzzy matching process.
     """
     # Example usage
-    excel1_path = 'final_merged_0_june.xlsx'  # Replace with your actual file path
-    excel2_path = 'result_400_June5.xlsx'  # Replace with your actual file path
-    mapping_path = 'column_compare_crl_trial_09_xx.xlsx'  # Replace with your actual file path
+    # --- IMPORTANT: REPLACE WITH YOUR ACTUAL FILE PATHS ---
+    excel1_path = 'final_merged_0_june.xlsx'
+    excel2_path = 'result_400_June5.xlsx'
+    mapping_path = 'column_compare_crl_trial_09_xx.xlsx'
     
     # Create mapper instance
     mapper = ExcelFuzzyMapper(excel1_path, excel2_path, mapping_path)
@@ -210,20 +212,29 @@ class ExcelFuzzyMapper:
     # Process mappings with 80% similarity threshold
     results = mapper.process_mappings(threshold=80)
     
-    # Generate report
-    mapper.generate_match_report(results, 'fuzzy_match_results_x.xlsx')
+    # --- FILENAME WITH TIMESTAMP ---
+    # Get current time for the timestamp
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    # Create the dynamic output filename
+    output_filename = f"fuzzy_match_results_x_{timestamp}.xlsx"
+    
+    # Generate report with the new dynamic filename
+    mapper.generate_match_report(results, output_filename)
     
     # Display sample results
     print("\nSample Results:")
     print(results.head())
     
     # Display match statistics
-    if len(results) > 0:
+    if not results.empty:
         print(f"\nMatch Statistics:")
         print(f"Total matched rows: {len(results)}")
         print(f"Average primary key match score: {results['primary_key_score'].mean():.2f}")
+
 def create_sample_excels():
-    
+    """
+    Creates sample Excel files to demonstrate how the script works.
+    """
     # Create sample Excel 1
     df1_sample = pd.DataFrame({
         'a1': ['ID001', 'ID002', 'ID003', 'ID004'],
@@ -236,12 +247,12 @@ def create_sample_excels():
     
     # Create sample Excel 2
     df2_sample = pd.DataFrame({
-        'b1': ['ID001', 'ID002', 'ID003', 'ID004'],
+        'b1': ['id001', 'id002', 'id003', 'id004'],
         'b2': ['Software', 'Human', 'Financial', 'Software'],
-        'b5': ['John D.', 'Jane S.', 'Bob J.', 'Alice B.'],
-        'b6': ['Dept IT', 'Dept HR', 'Dept Finance', 'Dept IT'],
+        'b5': ['John D.', 'jane smith', 'Bob J.', 'Alice B.'],
+        'b6': ['Dept IT', 'Dept HR', 'DEPT FINANCE', 'Dept IT'],
         'b8': ['Engineer', 'Resources', 'Analyst', 'Developer'],
-        'b9': ['NY', 'LA', 'CHI', 'HOU']
+        'b9': ['ny', 'LA', 'CHI', 'HOU']
     })
     
     # Create sample mapping Excel
@@ -251,22 +262,18 @@ def create_sample_excels():
         'description': ['Primary Key', 'Name mapping', 'City mapping', 'Department concatenation', 'Role split mapping']
     })
     
-    # Save sample files (uncomment to create sample files)
+    # Save sample files
     df1_sample.to_excel('excel1_sample.xlsx', index=False)
     df2_sample.to_excel('excel2_sample.xlsx', index=False)
     mapping_sample.to_excel('mapping_sample.xlsx', index=False)
     
-    print("Excel Fuzzy Mapper Script Ready!")
-    print("\nTo use this script:")
-    print("1. Ensure you have the required packages installed:")
-    print("   pip install pandas openpyxl fuzzywuzzy python-Levenshtein")
-    print("\n2. Prepare your mapping Excel file with columns:")
-    print("   - 'source_column': Column(s) from Excel 1 (e.g., 'a1' or 'a10+a12')")
-    print("   - 'target_column': Column(s) from Excel 2 (e.g., 'b1' or 'b2+b8')")
-    print("   - 'description': Optional description of the mapping")
-    print("\n3. Update the file paths in the main() function")
-    print("\n4. Run the script!")
+    print("Sample Excel files (excel1_sample.xlsx, excel2_sample.xlsx, mapping_sample.xlsx) created!")
+    print("\nTo use them, update the file paths in the main() function and run the script.")
+
+
 if __name__ == "__main__":
+    # Uncomment the line below to create sample files in your directory
     # create_sample_excels()
+    
+    # Run the main matching process
     main()
-  
