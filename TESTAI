@@ -1,0 +1,55 @@
+graph TD
+    %% Styling
+    classDef frontend fill:#6c757d,stroke:#333,stroke-width:3px,color:white;
+    classDef auth fill:#ff9800,stroke:#333,stroke-width:3px,color:white;
+    classDef orchestrator fill:#ff7b00,stroke:#333,stroke-width:3px,color:white;
+    classDef registry fill:#007bff,stroke:#333,stroke-width:3px,color:white;
+    classDef agent fill:#28a745,stroke:#333,stroke-width:2px,color:white;
+    classDef mcp fill:#9c27b0,stroke:#333,stroke-width:2px,color:white;
+    classDef api fill:#f44336,stroke:#333,stroke-width:2px,color:white;
+
+    %% Layer 1: User
+    User((User / Frontend)):::frontend
+
+    %% Layer 1.5: Authentication
+    Auth["Auth Layer<br/>• JWT Validation<br/>• OAuth<br/>• Session Check"]:::auth
+
+    %% Layer 2: Host Agent
+    Host["Host Agent<br/>• Task Handling<br/>• Planner<br/>• Delegation"]:::orchestrator
+
+    %% Layer 3: Agents + Registry
+    Registry["Agent Registry<br/>Service"]:::registry
+    subgraph Agents ["Specialist Agents"]
+        subgraph Bank ["Banking & Finance"]
+            style Bank fill:#e8f5e9
+            Balance["Account Balance Agent"]:::agent
+            Transfer["Fund Transfer Agent"]:::agent
+            Deposit["Fixed Deposit Agent"]:::agent
+            Stmt["Download Stmt Agent"]:::agent
+        end
+        subgraph Spend ["Spending Analysis"]
+            style Spend fill:#fff3e0
+            Amazon["Spending Agent"]:::agent
+            Expenses["Expenses Agent"]:::agent
+        end
+    end
+
+    %% Backend Layer
+    subgraph Backend ["Backend Integration"]
+        MCP["MCP Server"]:::mcp
+        APIs["Mobile Banking APIs<br/>(Balance, Transfer, etc.)"]:::api
+    end
+
+    %% Flows
+    User -->|"HTTP/REST"| Auth
+    Auth -->|"Authorized"| Host
+    Auth -.->|"Unauthorized<br/>401"| User
+    Host <-->|"Discover Agents"| Registry
+    Host -->|"Plans & Delegates"| Agents
+    Agents -.->|"Register"| Registry
+
+    %% Banking to MCP
+    Bank -->|"Queries MCP/Tools"| MCP
+    MCP -->|"Calls APIs"| APIs
+
+    class Balance,Transfer,Deposit,Stmt,Amazon,Expenses agent;
