@@ -68,28 +68,23 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 
 ---
 
-
-GitHub Stats widgets — uncomment when public repo activity improves.
-See instructions below to boost stats.
-
 <p align="center">
   <a href="https://github.com/prguptadev">
-    <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
+    <img src="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=glassmorphism&hide_border=false&count_private=true&include_all_commits=true&border_radius=12&show=prs_merged,reviews&rank_icon=github&cache_seconds=60" alt="GitHub Stats" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/prguptadev">
-    <img src="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+    <img src="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=glassmorphism&hide_border=false&langs_count=10&border_radius=12&cache_seconds=60" alt="Top Languages" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/prguptadev">
-    <img src="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Top Languages" />
+    <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=midnight-purple&hide_border=true&border_radius=12" alt="GitHub Streak" />
   </a>
 </p>
-
 
 <p align="center">
   <i>"The best way to predict the future is to build it."</i>
