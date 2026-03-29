@@ -67,7 +67,7 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 **Robotic Arm with Real-time Image Processing** — *International Journal of Advanced Research, Vol 6, Issue 03, March 2018*
 
 ---
-<--
+<!--
 <p align="center">
   <a href="https://github.com/prguptadev">
     <img src="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=glassmorphism&hide_border=false&count_private=true&include_all_commits=true&border_radius=12&show=prs_merged,reviews&rank_icon=github&cache_seconds=60" alt="GitHub Stats" />
