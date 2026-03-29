@@ -68,7 +68,6 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 
 ---
 <!--
-<!-- Dark mode cards -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=midnight_purple&count_private=true&include_all_commits=true&border_radius=8&hide_rank=true&card_width=400&cache_seconds=60" />
