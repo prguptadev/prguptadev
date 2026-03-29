@@ -64,26 +64,33 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 
 ### Publication
 
-**Robotic Arm with Real-time Image Processing** — *International Journal of Advanced Research, Vol 6, Issue 03, March 2018*
+[**Robotic Arm with Real-time Image Processing**](https://www.journalijar.com/article/23124/robotic-arm-with-real-time-image-processing-using-raspberry-pi-both-automated-and-manually/) — *International Journal of Advanced Research, Vol 6, Issue 03, March 2018*
 
 ---
 <!--
+<!-- Dark mode cards -->
 <p align="center">
-  <a href="https://github.com/prguptadev">
-    <img src="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=glassmorphism&hide_border=false&count_private=true&include_all_commits=true&border_radius=12&show=prs_merged,reviews&rank_icon=github&cache_seconds=60" alt="GitHub Stats" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=midnight_purple&count_private=true&include_all_commits=true&border_radius=8&hide_rank=true&card_width=400&cache_seconds=60" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=default&count_private=true&include_all_commits=true&border_radius=8&hide_rank=true&card_width=400&cache_seconds=60" />
+    <img src="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=midnight_purple&count_private=true&include_all_commits=true&border_radius=8&hide_rank=true&card_width=400&cache_seconds=60" alt="GitHub Stats" height="165" />
+  </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/prguptadev">
-    <img src="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=glassmorphism&hide_border=false&langs_count=10&border_radius=12&cache_seconds=60" alt="Top Languages" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=midnight_purple&langs_count=8&border_radius=8&card_width=400&cache_seconds=60" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=default&langs_count=8&border_radius=8&card_width=400&cache_seconds=60" />
+    <img src="https://github-readme-stats-drab-sigma.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=midnight_purple&langs_count=8&border_radius=8&card_width=500&cache_seconds=60" alt="Top Languages" height="165" />
+  </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/prguptadev">
-    <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=midnight-purple&hide_border=true&border_radius=12" alt="GitHub Streak" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=prguptadev&theme=dark&hide_border=false&border_radius=8&card_width=400" />
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=prguptadev&theme=default&hide_border=false&border_radius=8&card_width=400" />
+    <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=dark&hide_border=false&border_radius=8&card_width=400" alt="GitHub Streak" height="165" />
+  </picture>
 </p>
 -->
 <p align="center">
