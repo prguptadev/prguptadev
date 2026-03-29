@@ -69,9 +69,19 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=prguptadev&show_icons=true&theme=github_dark&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <a href="https://github.com/prguptadev">
+    <img src="https://github-readme-stats-prguptadevs-projects.vercel.app/api?username=prguptadev&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=prguptadev&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
+  <a href="https://github.com/prguptadev">
+    <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/prguptadev">
+    <img src="https://github-readme-stats-prguptadevs-projects.vercel.app/api/top-langs/?username=prguptadev&layout=compact&theme=github_dark&hide_border=true&langs_count=8" alt="Top Languages" />
+  </a>
 </p>
