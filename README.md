@@ -1,21 +1,77 @@
+# Prashant Gupta
 
-### Hi there 👋
-[💼 Resume](https://prguptadev.netlify.app) 
-<br>
-[🔭Linkedin](https://www.linkedin.com/in/prashant-gupta-31023b10a/)
-<!--
-**prguptadev/prguptadev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Generative AI Architect | Backend Engineering Leader | 7+ Years in Banking & Fintech**
 
-Here are some ideas to get you started:
+Currently leading GenAI initiatives at India's largest private-sector bank — building production-deployed AI systems serving nationwide operations.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-“Intelligence is the ability to avoid doing work, yet getting the work done.”
-― Linus Torvalds
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/prguptadev)
+[![npm](https://img.shields.io/badge/npm-unimem-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/unimem)
+[![Website](https://img.shields.io/badge/JVM_CodeLens-jvmcodelens.com-4285F4?style=flat&logo=google-chrome&logoColor=white)](https://jvmcodelens.com)
+
+---
+
+### What I'm Building
+
+- **Production AI Systems** — Architected and deployed an intelligent document processing system using Gemini 2.5 Flash with a dual-approach extraction pipeline, now live and serving 800+ users nationwide
+- **Multi-Agent Banking Assistant** — HDFC Bank's first AI-native assistant using Google ADK, A2A protocol, and MCP. Pioneered a dynamic Agent Registry with self-registration and heartbeat-based discovery
+- **Email Intelligence Platform** — RAG pipelines with hybrid retrieval (BGE-M3), knowledge graphs (Memgraph), 19-category classification, and automated reply generation
+
+---
+
+### Open Source & Side Projects
+
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [**JVM CodeLens**](https://jvmcodelens.com) | AI-powered JVM diagnostics platform — 6 microservices, cross-platform desktop app, AI root cause analysis with 4 LLM providers, 90-day forecasting | Java 21, Spring Boot, React, Electron, Node.js, GCP |
+| **OpenJules** | Enterprise autonomous AI coding agent — Jira to PR pipeline, 18-stage workflow, multi-LLM routing, human-in-the-loop | TypeScript, React, Node.js, Gemini, Claude, MCP |
+| [**UniMem**](https://www.npmjs.com/package/unimem) | Universal AI CLI memory service — seamless context switching across Claude Code, Gemini CLI, Codex, Cursor. Published on npm | TypeScript, Node.js, SQLite, MCP |
+| **Vaak** | Self-hosted LLM serving platform — vLLM/llama.cpp auto-selection, cross-OS, API key management, rate limiting, quantization analysis | Python, FastAPI, Next.js, vLLM |
+
+---
+
+### Tech Stack
+
+**AI/GenAI:** Multi-Agent Systems, RAG, Google ADK, A2A, MCP, LangGraph, LangChain, Prompt Engineering, vLLM, LiteLLM
+
+**Backend:** Java, Python, Spring Boot, Spring Batch, FastAPI, Microservices, Kafka, RabbitMQ, GraphQL
+
+**Databases:** PostgreSQL, MySQL, Couchbase, Neo4j, Memgraph, Qdrant, Redis, QuestDB
+
+**Infrastructure:** Docker, Kubernetes, OpenShift, GCP, CI/CD, GitHub Actions
+
+**Frontend:** React, React Native, Next.js, Angular, Electron, Node.js
+
+---
+
+### Career
+
+| Role | Company | Period |
+|------|---------|--------|
+| Senior Manager — AI & Platform Engineering | HDFC Bank | 2025 – Present |
+| Senior Software Engineer | Wibmo Inc (PayU) | 2022 – 2025 |
+| Software Engineer | Standard Chartered | 2018 – 2022 |
+
+---
+
+### Recent Activity
+
+- Attended **Google I/O Connect Bengaluru 2025** as a delegate
+- Published technical analysis on **LLM token optimization** on Reddit
+- Published [**unimem**](https://www.npmjs.com/package/unimem) on npm registry
+- Founded [**JVM CodeLens**](https://jvmcodelens.com) — AI-powered JVM diagnostics startup
+
+---
+
+### Publication
+
+**Robotic Arm with Real-time Image Processing** — *International Journal of Advanced Research, Vol 6, Issue 03, March 2018*
+
+---
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=prguptadev&show_icons=true&theme=github_dark&hide_border=true&count_private=true" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=prguptadev&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
+</p>
