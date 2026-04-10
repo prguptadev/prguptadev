@@ -67,7 +67,7 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
 [**Robotic Arm with Real-time Image Processing**](https://www.journalijar.com/article/23124/robotic-arm-with-real-time-image-processing-using-raspberry-pi-both-automated-and-manually/) — *International Journal of Advanced Research, Vol 6, Issue 03, March 2018*
 
 ---
-<!--
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-drab-sigma.vercel.app/api?username=prguptadev&show_icons=true&theme=midnight_purple&count_private=true&include_all_commits=true&border_radius=8&hide_rank=true&card_width=400&cache_seconds=60" />
@@ -91,7 +91,7 @@ Currently leading GenAI initiatives at India's largest private-sector bank — b
     <img src="https://streak-stats.demolab.com/?user=prguptadev&theme=dark&hide_border=false&border_radius=8&card_width=400" alt="GitHub Streak" height="165" />
   </picture>
 </p>
--->
+
 <p align="center">
   <i>"The best way to predict the future is to build it."</i>
 </p>
